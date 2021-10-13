@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Prototipo </title>
+    <link rel="stylesheet" href="form1est.css"/>
+</head>
+
+<body>
+<header>
+
+    <div id="container">
+
+    <h1  > "Chambitas" </h1> <font-family> 
+<nav>
+
+  <ul>
+
+<a href="chamba.html">
+  Inicio
+</a>
+  </ul> 
+     <ul>
+      <a href="form2.html" >
+     
+ Registro de empresas
+</a>
+</ul>
+</nav>
+<div class="clearfix"></div>
+
+<article esta parte es para el fichero de informacion del solicitante >
+
+
+<section  id="content"> 
+
+  <article class="article">
+
+    <h2 >  Registro de empleados </h2><br>
+  
+  </article>
+  <fieldset>
+    <legend>Informacion de contacto</legend>
+  
+  <br> <p2>Ingresa tu correo electronico </p2>
+  <input type="text" id="email" name="email"
+  size="30" value="ejemplo@gmail.com"/> <br>
+
+</fieldset>
+
+  <form enctype="multipart/form-data" action="envio.php" method="POST">
+<br>
+<fieldset>
+    <legend>Información personal</legend>
+    
+      <br> <label for="nombre">Nombre completo</label>
+       <input type="text" id="nombre" name="nombre"/><br>
+
+         <br> <label for="AP">Apellido Paterno </label>
+         <input type="text" id=" AP" name="AP"/><br>
+
+            <br> <label for="AM">Apellido Materno</label>
+             <input type="text" id="AM" name="AM"/><br>
+
+
+                <br><label for="fichero"; >Adjunta una fotografia tuya</label>
+                 <input type="file" id="fichero" name="fichero"/><br>
+                 <br>
+                 
+                           <label>
+                            Dirección: <input type="text" name="direccion">
+                          </label>
+                        
+                  <br>
+                  <br>
+                        Estado civil:<br>
+                    
+                        <input type="checkbox" name="casado"> Casado<br>
+                    
+                        <input type="checkbox" name="Soltero"> Soltero<br>
+                    
+                        <input type="checkbox" name="Union libre"> Union libre <br>
+                    <br> 
+                    Género:
+
+                    <select name="genero">
+                
+                      <option>Masculino</option>
+                
+                      <option>Femenino</option>
+                
+                    </select>
+                  </fieldset>
+                    <br>
+
+                    <input type="reset" value="Reiniciar el formulario">
+                    <br><br>
+                        <input type="button" onclick="location.href=' ';"
+                        value="enviar formulario" />
+
+</section>
+        
+      </form>
+    
+    </div>
+
+</header>
+
+</body>
+
+</html>

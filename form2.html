@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registro de empresa </title>
+    <link rel="stylesheet" href="form2est.css"/>
+</head>
+
+<body>
+
+
+    <div id="container">
+
+    <h1  > "Chambitas" </h1> <font-family> 
+<nav>
+
+  <ul>
+
+<a href="chamba.html">
+  Inicio
+</a>
+  </ul> 
+     <ul>
+      <a href="form1.html" >
+     
+ Registro de empleados
+</a>
+</ul>
+</nav>
+<div class="clearfix"></div>
+
+<article esta parte es para el fichero de informacion del solicitante >
+
+
+<section id="content">
+
+  <article class="article">
+
+    <h2 >  Registra tu empresa  </h2><br>
+  
+  </article>
+  <fieldset>
+    <legend>Informacion de contacto</legend>
+  
+  <br> <p2>Correo de la empresa </p2>
+  <input type="text" id="email empresa" name="email empresa"
+  size="30" value="ejemplo@gmail.com"/> <br>
+
+</fieldset>
+
+  <form enctype="multipart/form-data" action="envio.php" method="POST">
+<br><br>
+<fieldset>
+    <legend>Informacion de la empresa</legend>
+    
+      <br> <label for="nombre de la empresa">Nombre de la empresa</label>
+       <input type="text" id="nombre" name="nombre"/><br>
+
+         <br> <label for="Nom emlpeador">Nombre del gerente </label>
+         <input type="text" id="Nom empleador" name="Nom empleador"/><br>
+
+            <br> <label for="Nom">Nombre Materno</label>
+             <input type="text" id="AM" name="AM"/><br>
+
+
+                <br><label for="img empresa"; >Agrega una foto de tu empresa</labe   l>
+                 <input type="file" id="img emp" name="fto emp"/><br>
+                 <br>
+                 
+                           <label>
+                            Dirección de la empresa: <input type="text" name="dire emp">
+                          </label>
+                        
+                  <br>
+                  <br>
+                        Estado civil:<br>
+                    
+                        <input type="checkbox" name="casado"> Casado<br>
+                    
+                        <input type="checkbox" name="Soltero"> Soltero<br>
+                    
+                        <input type="checkbox" name="Union libre"> Union libre <br>
+                    <br> 
+                    Género:
+
+                    <select name="genero">
+                
+                      <option>Masculino</option>
+                
+                      <option>Femenino</option>
+                
+                    </select>
+                  </fieldset>
+                    <br><br>
+
+                    <input type="reset" value="Reiniciar registrio">
+                    <br><br>
+                        <input type="button" onclick="location.href=' ';"
+                        value="Registra tu empresa" />
+
+</section>
+        
+      </form>
+    
+    </div>
+
+</body>
+
+</html>
