@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>App</title>
+</head>
+<body style="text-align:center;font-family:sans-serif;background:#000;color:#0f0;">
 
+<h1>Bienvenido 👋</h1>
+
+<p id="usuario"></p>
+
+<button onclick="logout()">Cerrar sesión</button>
+
+<script>
+let user = localStorage.getItem("sesion");
+
+if(!user){
+  window.location.href = "login.html";
+}
+
+document.getElementById("usuario").innerText = "Usuario: " + user;
+
+function logout(){
+  localStorage.removeItem("sesion");
+  window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>
