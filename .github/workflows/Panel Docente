@@ -1,0 +1,40 @@
+<h1>👨‍🏫 Panel Docente</h1>
+
+<input id="nombre" placeholder="Alumno">
+<input id="grupo" placeholder="Grupo">
+<input id="grado" placeholder="Grado">
+
+<button onclick="addAlumno()">Agregar alumno</button>
+
+<hr>
+
+<textarea id="plan" placeholder="Planeación"></textarea>
+<button onclick="savePlan()">Guardar planeación</button>
+
+<script>
+const API="http://localhost:3000";
+
+function addAlumno(){
+ fetch(API+"/alumnos",{
+  method:"POST",
+  headers:{"Content-Type":"application/json"},
+  body:JSON.stringify({
+    nombre:nombre.value,
+    grupo:grupo.value,
+    grado:grado.value
+  })
+ });
+}
+
+function savePlan(){
+ fetch(API+"/planeaciones",{
+  method:"POST",
+  headers:{"Content-Type":"application/json"},
+  body:JSON.stringify({
+    docente:localStorage.getItem("user"),
+    materia:"General",
+    contenido:plan.value
+  })
+ });
+}
+</script>
