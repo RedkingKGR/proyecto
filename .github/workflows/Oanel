@@ -1,0 +1,16 @@
+<h1>🧑‍💼 Admin</h1>
+
+<button onclick="load()">Ver alumnos</button>
+<div id="out"></div>
+
+<script>
+const API="http://localhost:3000";
+
+function load(){
+ fetch(API+"/alumnos")
+ .then(r=>r.json())
+ .then(data=>{
+  out.innerHTML = JSON.stringify(data,null,2);
+ });
+}
+</script>
