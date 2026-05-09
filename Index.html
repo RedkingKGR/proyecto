@@ -1,1 +1,49 @@
-index.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+</head>
+<body style="text-align:center;font-family:sans-serif;background:#111;color:#0f0;">
+
+<h2>🔐 Iniciar sesión</h2>
+
+<input id="user" placeholder="Usuario"><br><br>
+<input id="pass" type="password" placeholder="Contraseña"><br><br>
+
+<button onclick="login()">Entrar</button>
+<button onclick="register()">Registrar</button>
+
+<p id="msg"></p>
+
+<script>
+function register(){
+  let u = document.getElementById("user").value;
+  let p = document.getElementById("pass").value;
+
+  if(!u || !p){
+    document.getElementById("msg").innerText = "Completa los campos";
+    return;
+  }
+
+  localStorage.setItem(u, p);
+  document.getElementById("msg").innerText = "Usuario registrado ✅";
+}
+
+function login(){
+  let u = document.getElementById("user").value;
+  let p = document.getElementById("pass").value;
+
+  let stored = localStorage.getItem(u);
+
+  if(stored == p){
+    localStorage.setItem("sesion", u);
+    window.location.href = "app.html";
+  } else {
+    document.getElementById("msg").innerText = "❌ Datos incorrectos";
+  }
+}
+</script>
+
+</body>
+</html>
